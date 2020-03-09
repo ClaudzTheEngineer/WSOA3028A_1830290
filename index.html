@@ -2,6 +2,8 @@
 <html>
 
 <head>
+  <script src = "index.js"></script>
+  <link href="styleSheet.css" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="desciption" content="Home page">
   <meta name="author" content="Claudio Surmon">
@@ -12,10 +14,8 @@
 </head>
 
 <body>
-
-
-  <header>
-    <nav>
+  <header id = "header">
+    <nav style = "text-align: center;">
       <a href="index.html">Home</a>
       <a href="about/me.html">About</a>
       <a href="blogs/blog-index.html">Blogs</a>
@@ -23,8 +23,11 @@
       <a href="underConstruction.html">Construction Zone</a>
     </nav>
 
-    <h1>Giovanni Suzzi</h1>
-    <h2>The freelance mercenary turned freelance coder</h2>
+    <h1 style = "text-align: center;">
+      Giovanni Suzzi
+    </h1>
+    <h2 style = "text-align: center;">
+      The freelance mercenary turned freelance coder</h2>
     <img src=images/PlaceHolder.png alt="PlaceHolder Image" longdesc="This is a PlaceHolder" height="256" width="256">
   </header>
 
@@ -33,7 +36,13 @@
       Latest blog
     </h2>
     <a href="blogs/2020-02-28-blog5.html">Meta meta-data blog post</a>
+
+    <button onclick="myFunction()">Click me</button>
   </main>
+
+  <footer>
+
+  </footer>
 
 </body>
 
