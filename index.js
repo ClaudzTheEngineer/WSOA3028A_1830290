@@ -1,16 +1,15 @@
-function myFunction() {
+function colorButton() {
     //console.log(apple.name);
-    var body = document.getElementById("header");
+    let root = document.documentElement;
 
-    body.style.borderColor = "#ff0000";
+    root.style.setProperty('--main-accent-color',getRandomColor());
 }
 
-const apple = {
-    name: "bapple"
-
-}
-
-const jim = {
-    name: "jim",
-    knife: "stabby stabby" 
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
 }

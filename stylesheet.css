@@ -32,7 +32,7 @@ header{
     border-top-width: 0px;
     border-right-width: 15px;
     border-bottom-width: 0px;
-    border-color: var(--main-accent-color);;
+    border-color: var(--main-accent-color);
     padding: 15px
   }
   article{
@@ -42,7 +42,7 @@ header{
     border-top-width: 0px;
     border-right-width: 15px;
     border-bottom-width: 0px;
-    border-color: var(--main-accent-color);;
+    border-color: var(--main-accent-color);
     padding: 15px
   }
   footer{
@@ -52,7 +52,7 @@ header{
     border-top-width: 0px;
     border-right-width: 15px;
     border-bottom-width: 15px;
-    border-color: var(--main-accent-color);;
+    border-color: var(--main-accent-color);
     padding: 15px
   }
   nav{
