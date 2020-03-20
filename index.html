@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <script src = "index.js"></script>
+  <script src="sidebar.js"></script>
   <link href="stylesheet.css" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="desciption" content="Home page">
@@ -13,17 +13,22 @@
   </title>
 </head>
 
-<body>
+<body id="body" onload="onLoad()" onresize="onLoad()">
   <header>
-    <nav>
-      <a href="index.html">Home</a>
+    <nav id="sidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="#">Home</a>
       <a href="about/me.html">About</a>
-      <a href="blogs/blog-index.html">Blogs</a>
-      <a href="images/Gallery-index.html">Gallery</a>
+      <a href="blogs/index.html">Blogs</a>
+      <a href="images/">Gallery</a>
       <a href="underConstruction.html">Construction Zone</a>
+    </nav>
+    <nav id="main">
+
     </nav>
 
     <h1>
+      <button class="openbtn" onclick="openNav()">&#9776;</button>
       Giovanni Suzzi
     </h1>
     <h2>
