@@ -8,15 +8,15 @@ function onLoad() {
     marginWidth = (parseInt(getComputedStyle(document.getElementById("body")).marginLeft) + 15) + "px";
     bodyheight = `${parseInt(document.getElementById("body").clientHeight) - 60}px`
     sidebar = document.getElementById("sidebar");
-    sidebar.style.transition = "0s";
-    sidebar.style.height = bodyheight;
+    sidebar.style.transition = "width 0s";
+    //sidebar.style.height = bodyheight;
     sidebar.style.left = marginWidth;
-    //sidebar.style.transition = "0.5s";
+
 }
 
 function openNav() {
 
-
+    sidebar.style.transition = "width 0.5s";
 
     document.getElementById("sidebar").style.width = "200px";
 
@@ -34,5 +34,5 @@ function closeNav() {
 
     document.getElementById("sidebar").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
-
+    sidebar.style.transition = "width 0s";
 }

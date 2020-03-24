@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <link href="../stylesheet.css" rel="stylesheet">
+    <script src="../js/sidebar.js"></script>
+    <link href="../css/stylesheet.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="author" content="Claudio Surmon">
     <meta name="desciption" content="Blog about Meta-data">
@@ -13,15 +14,13 @@
     </title>
 </head>
 
-<body>
+<body id="body" onload="onLoad()" onresize="onLoad()">
+
+    <script src="../js/nav.js"></script>
+
     <header>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../about/me.html">About</a>
-            <a href="blog-index.html">Blogs</a>
-            <a href="../images/Gallery-index.html">Gallery</a>
-            <a href="../underConstruction.html">Construction Zone</a>
-        </nav>
+
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
     </header>
 
     <article>
