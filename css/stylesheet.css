@@ -1,144 +1,111 @@
+@font-face{
+    font-family: rufina;
+    src: url(../fonts/Rufina-Bold.ttf)
+}
+
+@font-face{
+    font-family: sintony;
+    src: url(../fonts/Sintony-Regular.ttf)
+}
+
 :root {
     --main-bg-color: #232020;
-    --main-bg2-color: #3a3535;
-    --main-accent-color: #ff7315;
-    --main-textbg-color: #f4f4f4;
-    --main-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --main-bg2-color: #736d62;
+    --main-accent-color: #90b8c4;
+    --main-accent2-color: #7e94a9;
+    --main-textbg-color: #f3f4f3;
+    --main-font: sintony;
+    --main-heading-font: rufina;
+
+    text-align: center;
+    font-family: var(--main-font);
   }
 
-header{
-    background-color: var(--main-textbg-color);
-    border-style:solid;
-    border-left-width: 15px;
-    border-top-width: 15px;
-    border-right-width: 15px;
-    border-bottom-width: 0px;
-    border-color: var(--main-accent-color);
-    padding: 15px
-    
-}
-  body {
-    background-color:var(--main-bg-color);
-    width: 750px;
-    margin: auto;
-    border-style: solid;
-    border-color: var(--main-bg2-color);
-    border-width: 15px;
-    
-  }
-  main{
-    background-color:var(--main-textbg-color);
-    border-style:solid;
-    border-left-width: 15px;
-    border-top-width: 0px;
-    border-right-width: 15px;
-    border-bottom-width: 0px;
-    border-color: var(--main-accent-color);
-    padding: 15px
-  }
-  article{
-    background-color:var(--main-textbg-color);
-    border-style:solid;
-    border-left-width: 15px;
-    border-top-width: 0px;
-    border-right-width: 15px;
-    border-bottom-width: 0px;
-    border-color: var(--main-accent-color);
-    padding: 15px
-  }
-  footer{
-    background-color:var(--main-textbg-color);
-    border-style:solid;
-    border-left-width: 15px;
-    border-top-width: 0px;
-    border-right-width: 15px;
-    border-bottom-width: 15px;
-    border-color: var(--main-accent-color);
-    padding: 15px
+  header{
+      text-align: left;
   }
   nav{
-
-    font-family: var(--main-font);
-  }
-  h1{
-    text-align: center;
-    font-family: var(--main-font);
-  }
-  h2{
-    text-align: center;
-    font-family: var(--main-font);
-    font-size: large;
-  }
-  p{
-      text-align: justify;
-      font-family: var(--main-font);
+      margin-bottom: 1em;
   }
 
-  aside{
-    float: left;
-    width: 200px;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--main-textbg-color);
+    box-shadow: 10px 10px 5px var(--main-bg2-color);
   }
 
-/* The sidebar menu */
-.sidebar {
-  height: 350px; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0;
-  left: 0px;
-  background-color: var(--main-bg2-color); /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0s; /* 0.5 second transition effect to slide in the sidebar */
-  border-style: solid;
-  border-width: 0px;
-  border-color: var(--main-accent-color);
-  border-right-width: 15px;
-  border-bottom-width: 15px;
-  margin-top: 15px;
-}
-/* The sidebar links */
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  font-style: bold;
-  color: var(--main-accent-color);
-  display: block;
-  transition: 0.3s;
-}
+  li {
+    float:left
+  }
+  
+  li a{
+      display: block;
+      color: var(--main-bg-color);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      
+  }
 
-/* Position and style the close button (top right corner) */
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
+  li a:hover {
+    background-color: var(--main-accent-color);
+  }
 
-/* The button used to open the sidebar */
-.openbtn {
-  font-size: 30px;
-  cursor: pointer;
-  color: #111;
-  background-color: var(--main-textbg-color);
-  padding: 10px 15px;
-  border: none;
-  text-align: left;
-}
+  .active {
+    background-color: var(--main-accent2-color);
+  }
+  main,footer,article{
+    background-color: var(--main-textbg-color);
+    width: 64em;
+    margin:auto;
+    padding: 1em 3em;
+    box-shadow: 10px 10px 5px var(--main-bg2-color);
+    margin-bottom: 1em;
+  }
 
-.openbtn:hover {
-  background-color: var(--main-bg2-color);
-  color: var(--main-accent-color);
-}
+  main p {
+      text-align:justify;
+  }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  h1,h2,h3{
+      font-family: var(--main-heading-font);
+  }
 
+  h1 p{
+      text-align: center;
+  }
 
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
+  .gridContainer{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+  }
+
+  .card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 5px 5px 5px  var(--main-bg2-color);
+    transition: 0.3s;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    width: 300px;
+    background-color: white;
+    text-decoration: none;
+    color: var(--main-bg-color);
+  }
+  .card img{
+    width:300px;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow:10px 10px 5px var(--main-bg2-color);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+

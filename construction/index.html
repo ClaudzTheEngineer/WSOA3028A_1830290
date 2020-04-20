@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../css/stylesheet.css" rel="stylesheet">
+
+    <meta name="desciption" content="Plans for website page">
+    <meta name="author" content="Claudio Surmon">
+
+    <title>Construction Zone</title>
+</head>
+
+<body>
+    <header>
+        <img src="../images/logo128.png" alt="Logo" style="width:100px;height:100px;">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/index.html">About</a></li>
+            <li><a href="../blogs/index.html">Blogs</a></li>
+            <li><a href="../contact/index.html">Contact Me</a></li>
+            <li class="active"><a href="index.html">Construction Zone</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+
+        <h1>Construction Zone</h1>
+        <h2>Dumpground for various pieces of information regarding the continued improvement of this website</h2>
+        <h3>
+            Color Scheme
+        </h3>
+        <p>
+            The Proposed main color scheme for the website, this was chosen due to the clean aesthetic which it could
+            provide with the light and dark greys, with the bright orange accent. The cleanliness would originate from
+            the Giovanni's military background, where being tidy is of the upmost importance, while the orange would be
+            to capture the readers attention.
+        </p>
+        <img src=../images/Color-Hunt-Palett-165293.png alt="Color Palette" longdesc="This is a PlaceHolder"
+            width="600">
+
+        <h3>
+            Data structure
+        </h3>
+        <p>
+            The final website will consist of some form of database-esque storage system, into which all the various
+            blog posts will be stored. Then a singular blog template page is stored and then backfilled using
+            information from the database. This is appropriate from the perspective of Giovanni being skilled with
+            backend development and would feel comfortable with this style of data manipulation.
+        </p>
+        <h3>
+            The Character - Giovanni Suzzi
+        </h3>
+        <p>
+            This character is meant to be an amalgamation of my father and my grandfather. Combining the military
+            aspects of the former and the engineering industriousness of the latter, as well as some elements of their
+            lives. The history of the character is in the <a href=../about/index.html>about</a> page.
+        </p>
+        <figure>
+            <img src=../images/dadWithGun.jpg alt="William Surmon holding machine gun"
+                longdesc="Image of William Surmon holding browning machine gun" width="384">
+            <figcaption>
+                Placeholder photo of my father, William Surmon, while serving in the light horse regiment in the South
+                African border wars. This image helps capture part of the character i wish to create.
+                </br>
+                Credit: William Surmon. Private use.
+            </figcaption>
+        </figure>
+
+        <h2>
+            Overhaul
+        </h2>
+        <p>
+            A decision was made to overhaul the design of the website as a whole, as I started getting bogged down with
+            trying too many things at once. As such the site has been rewritten from the ground up and the styling has
+            been reimagined to better capture a more professional web developer.
+            </br>
+            The colour palette was changed to be a more calming set of colours as can be seen below. The previous style
+            was overly saturated on reflection.
+        </p>
+        <img src=../images/Colour-Palette-2.png alt="Color Palette" longdesc="This is a PlaceHolder" width="600">
+
+        <p>
+            The mobile oriented menu was removed due to the bodged implementation and new focus on creating a more
+            desktop focused webpage. A mobile version may come later
+        </p>
+
+        <h3>
+            Logo
+        </h3>
+        <p>
+            A logo to represent the company Giovanni had created was introduced as well as a tagline, both shown below.
+            The tagline is meant to capture the fact that Giovanni had a history with warfare. The logo utilises a clean
+            look with sharp straight lines indicative of military style.
+        </p>
+        <img src=../images/Logo-clear-1024.png alt="Logo" width="600">
+
+        <h3>
+            Blog List generation.
+        </h3>
+        <p>
+            I had attempted to have the cards on the <a href=../blogs/index.html>blog index</a> page be automatically
+            generated from javascript. Alithough i was able to make it generate the links using a predictable naming
+            structure and a for loop ( &quot;blog&quot;+i). The problem came when trying to generate the content for the
+            cards to display (image, title and short summary) as javascript cannot access files without using a server
+            side program (like Node.js) or using php, Github pages also does not support server side programs and as
+            such this idea was bust. Cards are entered manually.
+        </p>
+
+    </main>
+
+    <footer>
+        <p>
+            Copyright &copy; 2020 Suzzi Inc. Ltd.
+        </p>
+    </footer>
+
+</body>
+
+
+</html>

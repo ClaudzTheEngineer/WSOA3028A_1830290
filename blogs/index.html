@@ -1,43 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <link href="../stylesheet.css" rel="stylesheet">
     <meta charset="UTF-8">
-    <meta name="desciption" content="Blog index">
-    <meta name="author" content="Claudio Surmon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Blog Index
-    </title>
+
+    <link href="../css/stylesheet.css" rel="stylesheet">
+
+    <script src="../js/cardGen.js"></script>
+
+    <meta name="desciption" content="Blog index page">
+    <meta name="author" content="Claudio Surmon">
+
+    <title>Document</title>
 </head>
+
+
+
 
 <body>
     <header>
-        <nav>
-            <a href="../index.html">Home</a>
-            <a href="../about/me.html">About</a>
-            <a href="">Blogs</a>
-            <a href="../images/Gallery-index.html">Gallery</a>
-            <a href="../underConstruction.html">Construction Zone</a>
-        </nav>
-
-        <h1>
-            Blog index
-        </h1>
-
+        <img src="../images/logo128.png" alt="Logo" style="width:100px;height:100px;">
     </header>
-    <main>
-        <ol>
-            <li><a href="2020-02-25-blog1.html"> 2020-02-25 &emsp;As We May Retroactively Think </a></li>
-            <li><a href="2020-02-26-blog2.html"> 2020-02-26 &emsp;The Internet's First Hello World</a></li>
-            <!--<li><a href="2020-02-27-blog3.html"> 2020-02-25 &emsp;cout &lt;&lt; "Hello World!" </a></li>-->
-            <li><a href="2020-02-28-blog4.html"> 2020-02-28 &emsp;Semantics of Semantic Markup</a></li>
-            <li><a href="2020-02-28-blog5.html"> 2020-02-28 &emsp;Meta Meta-data reflection</a></li>
-        </ol>
-    </main>
-    <footer>
 
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about/index.html">About</a></li>
+            <li class="active"><a href="../blogs/index.html">Blogs</a></li>
+            <li><a href="../contact/index.html">Contact Me</a></li>
+            <li><a href="../construction/index.html">Construction Zone</a></li>
+        </ul>
+    </nav>
+
+
+
+    <main class="gridContainer">
+        <a class="card" href="blog1.html">
+            <img src="../images/PlaceHolder.png" alt="avatar">
+            <div class="container">
+                <h2>
+                    As we may retroactively think
+                </h2>
+                <p>
+                    Lorem ipsum blah blah fish paste...
+                </p>
+            </div>
+        </a>
+        <a class="card" href="blog2.html">
+            <img src="../images/PlaceHolder.png" alt="avatar">
+            <div class="container">
+                <h2>
+                    The Internet's First Hello World
+                </h2>
+                <p>
+                    Lorem ipsum blah blah fish paste...
+                </p>
+            </div>
+        </a>
+        <a class="card" href="blog3.html">
+            <img src="../images/PlaceHolder.png" alt="avatar">
+            <div class="container">
+                <h2>
+                    cout &lt;&lt; "Hello World";
+                </h2>
+                <p>
+                    Lorem ipsum blah blah fish paste...
+                </p>
+            </div>
+        </a>
+        <a class="card" href="blog4.html">
+            <img src="../images/PlaceHolder.png" alt="avatar">
+            <div class="container">
+                <h2>
+                    Semantics of Semantic Markup
+                </h2>
+                <p>
+                    Lorem ipsum blah blah fish paste...
+                </p>
+            </div>
+        </a>
+        <a class="card" href="blog5.html">
+            <img src="../images/PlaceHolder.png" alt="avatar">
+            <div class="container">
+                <h2>
+                    Meta Meta-data blog post
+                </h2>
+                <p>
+                    Lorem ipsum blah blah fish paste...
+                </p>
+            </div>
+        </a>
+        <a class="card" href="blog6.html">
+            <img src="../images/PlaceHolder.png" alt="avatar">
+            <div class="container">
+                <h2>
+                    Alternative Communication Ideas - Speculation
+                </h2>
+                <p>
+                    Lorem ipsum blah blah fish paste...
+                </p>
+            </div>
+        </a>
+    </main>
+
+    <footer>
+        <p>this is a footer</p>
     </footer>
 
 </body>
