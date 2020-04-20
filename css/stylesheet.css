@@ -107,6 +107,8 @@
   }
   .card img{
     width:300px;
+    height:300px;
+    object-fit: cover;
   }
   
   /* On mouse-over, add a deeper shadow */
