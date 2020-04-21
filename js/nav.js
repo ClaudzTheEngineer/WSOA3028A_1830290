@@ -1,6 +1,6 @@
 function insertHeader() {
     document.getElementsByTagName("header")[0].innerHTML +=
-        '<img src="../images/Logo128.png" alt="Logo" style="width:100px;height:100px;"></img>';
+        '<img src="/images/Logo128.png" alt="Logo" style="width:100px;height:100px;"></img>';
 }
 
 function generateNav() {
