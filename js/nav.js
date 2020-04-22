@@ -80,13 +80,13 @@ class Card {
 let cards = [
     new Card
         ("blog10.html",
-            "../images/PlaceHolder.png",
+            "../images/person-using-laptop-computer.jpg",
             "Placeholder",
             "Interacting with Interactivity",
             "Lorem ipsum blah blah fish paste..."),
     new Card
         ("blog9.html",
-            "../images/PlaceHolder.png",
+            "../images/Microphone.jpg",
             "Placeholder",
             "Teaching and learning online.",
             "Lorem ipsum blah blah fish paste..."),
