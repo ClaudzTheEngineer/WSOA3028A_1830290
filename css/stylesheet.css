@@ -144,21 +144,22 @@
     display: inline-block;
     font-size: 32px;
     margin: 25px 0px;
-    
+    color: var(--main-bg-color);
+    box-shadow: 5px 5px 5px var(--main-bg2-color);
     transition:0.3s;
   }
   
-  button:disabled{
-    color:var(--main-bg2-color);
-    box-shadow: 0px 0px 0px var(--main-bg2-color);
-  }
+  
   button:hover:enabled{
     box-shadow:10px 10px 5px var(--main-bg2-color);
     background-color: #90b8c4;
   }
   button:active:enabled{
-    color: var(--main-bg-color);
-    box-shadow: 5px 5px 5px var(--main-bg2-color);
+    
+  }
+  button:disabled{
+    color:var(--main-bg2-color);
+    box-shadow: 0px 0px 0px var(--main-bg2-color);
   }
 
 
