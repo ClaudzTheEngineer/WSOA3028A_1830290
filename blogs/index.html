@@ -7,6 +7,7 @@
 
     <link href="../css/stylesheet.css" rel="stylesheet">
     <script src="/WSOA3028A_1830290/js/nav.js"></script>
+    <script src="../js/cardpage.js"></script>
 
     <meta name="desciption" content="Blog index page">
     <meta name="author" content="Claudio Surmon">
@@ -17,122 +18,15 @@
 
 
 
-<body onload="insertElements(2)">
+<body onload="generateCards()">
     <header></header>
 
     <nav></nav>
 
-    <main class="gridContainer">
-        <a class="card" href="blog1.html">
-            <img src="../images/Vannevar_Bush_portrait.jpg" alt="Portrait of Vannevar Bush">
-            <div class="container">
-                <h2>
-                    As we may retroactively think
-                </h2>
-                <p>
-                    Lorem ipsum blah blah fish paste...
-                </p>
-            </div>
-        </a>
-        <a class="card" href="blog2.html">
-            <img src="../images/Arpanet_logical_map.png" alt="Logical Map of Arpanet circa 1977">
-            <div class="container">
-                <h2>
-                    The Internet's First Hello World
-                </h2>
-                <p>
-                    Lorem ipsum blah blah fish paste...
-                </p>
-            </div>
-        </a>
-        <a class="card" href="blog3.html">
-            <img src="../images/dadWithGun.jpg" alt="Giovanni at war">
-            <div class="container">
-                <h2>
-                    cout &lt;&lt; "Hello World";
-                </h2>
-                <p>
-                    Lorem ipsum blah blah fish paste...
-                </p>
-            </div>
-        </a>
-        <a class="card" href="blog4.html">
-            <img src="../images/PlaceHolder.png" alt="avatar">
-            <div class="container">
-                <h2>
-                    Semantics of Semantic Markup
-                </h2>
-                <p>
-                    Lorem ipsum blah blah fish paste...
-                </p>
-            </div>
-        </a>
-        <a class="card" href="blog5.html">
-            <img src="../images/Henry-Cat2.jpg" alt="Henry the cat">
-            <div class="container">
-                <h2>
-                    Meta Meta-data blog post
-                </h2>
-                <p>
-                    Lorem ipsum blah blah fish paste...
-                </p>
-            </div>
-        </a>
-        <a class="card" href="blog6.html">
-            <img src="../images/PlaceHolder.png" alt="avatar">
-            <div class="container">
-                <h2>
-                    Alternative Communication Ideas - Speculation
-                </h2>
-                <p>
-                    Lorem ipsum blah blah fish paste...
-                </p>
-            </div>
-        </a>
-        <a class="card" href="blog7.html">
-            <img src="../images/PlaceHolder.png" alt="avatar">
-            <div class="container">
-                <h2>
-                    PlaceHolder
-                </h2>
-                <p>
-                    Lorem ipsum blah blah fish paste...
-                </p>
-            </div>
-        </a>
-        <a class="card" href="blog8.html">
-            <img src="../images/PlaceHolder.png" alt="avatar">
-            <div class="container">
-                <h2>
-                    PlaceHolder
-                </h2>
-                <p>
-                    Lorem ipsum blah blah fish paste...
-                </p>
-            </div>
-        </a>
-        <a class="card" href="blog9.html">
-            <img src="../images/PlaceHolder.png" alt="avatar">
-            <div class="container">
-                <h2>
-                    PlaceHolder
-                </h2>
-                <p>
-                    Lorem ipsum blah blah fish paste...
-                </p>
-            </div>
-        </a>
-        <a class="card" href="blog10.html">
-            <img src="../images/PlaceHolder.png" alt="avatar">
-            <div class="container">
-                <h2>
-                    PlaceHolder
-                </h2>
-                <p>
-                    Lorem ipsum blah blah fish paste...
-                </p>
-            </div>
-        </a>
+    <main class="navContainer">
+        <button id="prevButton" onclick="previousPage()"> &#8249</button>
+        <div class="gridContainer"></div>
+        <button id="nextButton" onclick="nextPage()"> &#8250</button>
     </main>
 
     <footer></footer>

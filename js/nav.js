@@ -41,7 +41,6 @@ function insertBlogNav(isBlog = false) {
         output += `<a href="#top">&#129069</a>`;
         if (blogNum < 10) output += `<a href="blog` + (blogNum + 1) + `.html"> &#129070</a>`;
 
-
         document.getElementsByClassName("blogNav")[0].innerHTML += output;
     }
 }
