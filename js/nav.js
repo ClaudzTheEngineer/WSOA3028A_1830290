@@ -21,11 +21,16 @@ function generateNav(active) {
     output += "</ul>";
 
     document.getElementsByTagName("nav")[0].innerHTML += output;
-    console.log(output);
+}
+
+function insertFooter() {
+    document.getElementsByTagName("footer")[0].innerHTML +=
+        '<p>Copyright &copy; 2020 Suzzi Inc. Ltd.</p>';
 }
 
 
 function insertElements(active) {
     insertHeader();
     generateNav(active);
+    insertFooter();
 }
