@@ -83,13 +83,13 @@ let cards = [
             "../images/person-using-laptop-computer.jpg",
             "Placeholder",
             "Interacting with Interactivity",
-            "Lorem ipsum blah blah fish paste..."),
+            "Interactivity as defined by the Oxford dictionary is..."),
     new Card
         ("blog9.html",
             "../images/Microphone.jpg",
             "Placeholder",
             "Teaching and learning online.",
-            "Lorem ipsum blah blah fish paste..."),
+            "In light of the current pandemic, any teaching..."),
     new Card
         ("blog8.html",
             "../images/PlaceHolder.png",
@@ -113,13 +113,13 @@ let cards = [
             "../images/Henry-Cat2.jpg",
             "Henry the Cat",
             "Meta Meta-data blog post",
-            "Lorem ipsum blah blah fish paste..."),
+            "The Latin origin word, meta, is used to describe..."),
     new Card
         ("blog4.html",
             "../images/PlaceHolder.png",
             "Placeholder",
             "Semantics of Semantic Markup",
-            "Lorem ipsum blah blah fish paste..."),
+            "Semantics is relating to meaning in language or logic..."),
     new Card
         ("blog3.html",
             "../images/Nonno.jpg",
@@ -131,13 +131,13 @@ let cards = [
             "../images/Arpanet_logical_map.png",
             "Logical Map of Arpanet circa 1977",
             "The Internet's First Hello World",
-            "Lorem ipsum blah blah fish paste..."),
+            "Just over 50 years ago, on October 29th, 1969..."),
     new Card
         ("blog1.html",
             "../images/Vannevar_Bush_portrait.jpg",
             "Portrait of Vannevar Bush",
             "As we may retroactively think",
-            "Lorem ipsum blah blah fish paste...")
+            "“As we may think”, was an essay written in...")
 
 
 
