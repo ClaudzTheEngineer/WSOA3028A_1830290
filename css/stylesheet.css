@@ -20,6 +20,9 @@
     text-align: center;
     font-family: var(--main-font);
   }
+  html{
+    scroll-behavior: smooth;
+  }
 
   header{
       text-align: left;
