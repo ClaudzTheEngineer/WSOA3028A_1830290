@@ -28,9 +28,27 @@ function insertFooter() {
         '<p>Copyright &copy; 2020 Suzzi Inc. Ltd.</p>';
 }
 
+function insertBlogNav(isBlog = false) {
+    if (isBlog) {
+        let path = window.location.pathname;
+        let blogNum = path.substring(path.lastIndexOf('/') + 5);
+        blogNum = parseInt(blogNum.substring(0, blogNum.lastIndexOf('.')));
+        console.log(blogNum);
 
-function insertElements(active) {
+        let output = "";
+
+        if (blogNum > 1) output += `<a href="blog` + (blogNum - 1) + `.html"> &#129068</a>`;
+        output += `<a href="#top">&#129069</a>`;
+        if (blogNum < 10) output += `<a href="blog7.html"> &#129070</a>`;
+
+
+        document.getElementsByClassName("blogNav")[0].innerHTML += output;
+    }
+}
+
+function insertElements(active, isBlog = false) {
     insertHeader();
     generateNav(active);
     insertFooter();
+    insertBlogNav(isBlog);
 }
