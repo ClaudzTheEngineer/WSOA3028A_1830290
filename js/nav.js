@@ -28,27 +28,38 @@ function insertFooter() {
         '<p>Copyright &copy; 2020 Suzzi Inc. Ltd.</p>';
 }
 
-function insertBlogNav(isBlog = false) {
-    if (isBlog) {
-        let path = window.location.pathname;
-        let blogNum = path.substring(path.lastIndexOf('/') + 5);
-        blogNum = parseInt(blogNum.substring(0, blogNum.lastIndexOf('.')));
-        console.log(blogNum);
 
-        let output = "";
 
-        if (blogNum > 1) {
-            output += `<a href="blog1.html">&#171;</a>`;
-            output += `<a href="blog` + (blogNum - 1) + `.html">&#8249;</a>`;
-        }
-        output += `<a href="#top">&#94;</a>`;
-        if (blogNum < cards.length) {
-            output += `<a href="blog` + (blogNum + 1) + `.html">&#8250;</a>`;
-            output += `<a href="blog` + cards.length + `.html">&#187;</a>`;
-        }
-        output += "<p>Blog " + blogNum + " of " + cards.length + "</p>"
-        document.getElementsByClassName("blogNav")[0].innerHTML += output;
+function insertBlogNav() {
+
+    let path = window.location.pathname;
+    let blogNum = path.substring(path.lastIndexOf('/') + 5);
+    blogNum = parseInt(blogNum.substring(0, blogNum.lastIndexOf('.')));
+
+    let output = "";
+
+    if (blogNum > 1) {
+        output += `<a href="blog1.html">&#171;</a>`;
+        output += `<a href="blog` + (blogNum - 1) + `.html">&#8249;</a>`;
     }
+    output += `<a href="#top">&#94;</a>`;
+    if (blogNum < cards.length) {
+        output += `<a href="blog` + (blogNum + 1) + `.html">&#8250;</a>`;
+        output += `<a href="blog` + cards.length + `.html">&#187;</a>`;
+    }
+    output += "<p>Blog " + blogNum + " of " + cards.length + "</p>"
+    document.getElementsByClassName("blogNav")[0].innerHTML += output;
+
+
+    output = "";
+    output += "| Published: " + cards[blogNum - 1].creation + " | Edited: " + cards[blogNum - 1].lastModified;
+    document.getElementById("info").innerHTML += output;
+
+
+}
+
+function insertBlogDateTime() {
+
 }
 
 function insertElements(active, isBlog = false) {
@@ -56,17 +67,23 @@ function insertElements(active, isBlog = false) {
     generateNav(active);
     insertFooter();
     if (active == 2 && isBlog == false) { generateCards() };
-    insertBlogNav(isBlog);
+    if (isBlog) {
+        insertBlogNav();
+        insertBlogDateTime();
+    }
 }
 
 
 class Card {
-    constructor(link, image, imageAlt, title, text) {
+    constructor(link, image, imageAlt, title, text, creation, lastModified) {
         this.link = link;
         this.image = image;
         this.imageAlt = imageAlt;
         this.title = title;
         this.text = text;
+        this.creation = creation;
+        this.lastModified = lastModified;
+
     }
     toHTML() {
         return `<a class="card" href="` + this.link + `">
@@ -85,65 +102,69 @@ class Card {
 
 let cards = [
     new Card
-        ("blog10.html",
+        ("blog8.html",
             "../images/person-using-laptop-computer.jpg",
             "Placeholder",
             "Interacting with Interactivity",
-            "Interactivity as defined by the Oxford dictionary is..."),
+            "Interactivity as defined by the Oxford dictionary is...",
+            "‎22 ‎April ‎2020",
+            "24 ‎April ‎2020"),
     new Card
-        ("blog9.html",
+        ("blog7.html",
             "../images/Microphone.jpg",
             "Placeholder",
             "Teaching and learning online.",
-            "In light of the current pandemic, any teaching..."),
+            "In light of the current pandemic, any teaching...",
+            "‎22 ‎April ‎2020",
+            "22 ‎April ‎2020"),
     new Card
-        ("blog8.html",
-            "../images/PlaceHolder.png",
-            "Placeholder",
-            "Why U matter.",
-            "Lorem ipsum blah blah fish paste..."),
-    new Card
-        ("blog7.html",
+        ("blog6.html",
             "../images/PlaceHolder.png",
             "Placeholder",
             "Giovanni's Company during the Outbreak",
-            "Lorem ipsum blah blah fish paste..."),
+            "Lorem ipsum blah blah fish paste...",
+            "‎22 ‎April ‎2020",
+            "24 ‎April ‎2020"),
     new Card
-        ("blog6.html",
+        ("blog5.html",
             "../images/Ravoire_radio_tower.JPG",
             "Raviore Radio Tower",
             "Communication Ideas - Speculation",
-            "As a result of the current pandemic..."),
+            "As a result of the current pandemic...",
+            "‎22 ‎April ‎2020",
+            "24 ‎April ‎2020"),
     new Card
-        ("blog5.html",
+        ("blog4.html",
             "../images/Henry-Cat2.jpg",
             "Henry the Cat",
             "Meta Meta-data blog post",
-            "The Latin origin word, meta, is used to describe..."),
+            "The Latin origin word, meta, is used to describe...",
+            "‎22 ‎April ‎2020",
+            "24 ‎April ‎2020"),
     new Card
-        ("blog4.html",
+        ("blog3.html",
             "../images/PlaceHolder.png",
             "Placeholder",
             "Semantics of Semantic Markup",
-            "Semantics is relating to meaning in language or logic..."),
-    new Card
-        ("blog3.html",
-            "../images/Nonno.jpg",
-            "Giovanni at War",
-            "cout &lt;&lt; \"Hello World\";",
-            "Lorem ipsum blah blah fish paste..."),
+            "Semantics is relating to meaning in language or logic...",
+            "‎22 ‎April ‎2020",
+            "24 ‎April ‎2020"),
     new Card
         ("blog2.html",
             "../images/Arpanet_logical_map.png",
             "Logical Map of Arpanet circa 1977",
             "The Internet's First Hello World",
-            "Just over 50 years ago, on October 29th, 1969..."),
+            "Just over 50 years ago, on October 29th, 1969...",
+            "‎22 ‎April ‎2020",
+            "24 ‎April ‎2020"),
     new Card
         ("blog1.html",
             "../images/Vannevar_Bush_portrait.jpg",
             "Portrait of Vannevar Bush",
             "As we may retroactively think",
-            "“As we may think”, was an essay written in...")
+            "“As we may think”, was an essay written in...",
+            "‎22 ‎April ‎2020",
+            "24 ‎April ‎2020")
 ]
 
 
