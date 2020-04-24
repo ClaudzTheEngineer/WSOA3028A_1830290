@@ -110,7 +110,7 @@ let cards = [
             "Lorem ipsum blah blah fish paste..."),
     new Card
         ("blog6.html",
-            "../images/Ravoire_radio_tower.JPG.png",
+            "../images/Ravoire_radio_tower.JPG",
             "Raviore Radio Tower",
             "Communication Ideas - Speculation",
             "As a result of the current pandemic..."),
