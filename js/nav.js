@@ -37,10 +37,16 @@ function insertBlogNav(isBlog = false) {
 
         let output = "";
 
-        if (blogNum > 1) output += `<a href="blog` + (blogNum - 1) + `.html"> &#129068</a>`;
-        output += `<a href="#top">&#129069</a>`;
-        if (blogNum < 10) output += `<a href="blog` + (blogNum + 1) + `.html"> &#129070</a>`;
-
+        if (blogNum > 1) {
+            output += `<a href="blog1.html">&#171;</a>`;
+            output += `<a href="blog` + (blogNum - 1) + `.html">&#8249;</a>`;
+        }
+        output += `<a href="#top">&#94;</a>`;
+        if (blogNum < cards.length) {
+            output += `<a href="blog` + (blogNum + 1) + `.html">&#8250;</a>`;
+            output += `<a href="blog` + cards.length + `.html">&#187;</a>`;
+        }
+        output += "<p>Blog " + blogNum + " of " + cards.length + "</p>"
         document.getElementsByClassName("blogNav")[0].innerHTML += output;
     }
 }
@@ -107,7 +113,7 @@ let cards = [
             "../images/PlaceHolder.png",
             "Placeholder",
             "Communication Ideas - Speculation",
-            "Lorem ipsum blah blah fish paste..."),
+            "As a result of the current pandemic..."),
     new Card
         ("blog5.html",
             "../images/Henry-Cat2.jpg",
@@ -138,11 +144,8 @@ let cards = [
             "Portrait of Vannevar Bush",
             "As we may retroactively think",
             "“As we may think”, was an essay written in...")
-
-
-
-
 ]
+
 
 let maxCardsOnScreen = 6;
 let pos = 0;
@@ -152,7 +155,7 @@ function generateCards() {
     for (let i = pos; i < clamp(pos + maxCardsOnScreen, 0, cards.length); i++) {
         output += cards[i].toHTML();
     }
-
+    document.getElementsByClassName("BlogIndexNumber")[0].innerHTML = "Blog page " + (pos / 6 + 1) + " of " + Math.ceil(cards.length / 6);
     document.getElementsByClassName("gridContainer")[0].innerHTML = output;
 
     document.getElementById("prevButton").disabled = (pos <= 0);
