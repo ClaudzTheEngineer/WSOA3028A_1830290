@@ -6,10 +6,10 @@ function insertHeader() {
 function generateNav(active) {
 
     let output = "<ul>\n";
-    let links = ["", "about/", "blogs/", "contact/", "construction/"];
-    let linkName = ["Home", "About", "Blogs", "Contact Me", "Construction Zone"];
+    let links = ["", "about/", "blogs/", "contact/", "services/", "construction/"];
+    let linkName = ["Home", "About", "Blogs", "Contact Me", "Services", "Construction Zone"];
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < links.length; i++) {
         let currentLink = "/WSOA3028A_1830290/" + links[i] + "index.html";
 
         output += "<li";
@@ -27,8 +27,6 @@ function insertFooter() {
     document.getElementsByTagName("footer")[0].innerHTML +=
         '<p>Copyright &copy; 2020 Suzzi Inc. Ltd.</p>';
 }
-
-
 
 function insertBlogNav() {
 
@@ -54,8 +52,6 @@ function insertBlogNav() {
     output = "";
     output += "| Published: " + cards[blogNum - 1].creation + " | Edited: " + cards[blogNum - 1].lastModified;
     document.getElementById("info").innerHTML += output;
-
-
 }
 
 function insertBlogDateTime() {
@@ -66,115 +62,54 @@ function insertElements(active, isBlog = false) {
     insertHeader();
     generateNav(active);
     insertFooter();
-    if (active == 2 && isBlog == false) { generateCards() };
+    if (active == 2) getCards(active, isBlog);
+}
+
+function refreshBlogContents(active, isBlog = false) {
+    if (active == 2 && isBlog == false) { generateCards(); };
     if (isBlog) {
         insertBlogNav();
         insertBlogDateTime();
     }
 }
 
-
-class Card {
-    constructor(link, image, imageAlt, title, text, creation, lastModified) {
-        this.link = link;
-        this.image = image;
-        this.imageAlt = imageAlt;
-        this.title = title;
-        this.text = text;
-        this.creation = creation;
-        this.lastModified = lastModified;
-
-    }
-    toHTML() {
-        return `<a class="card" href="` + this.link + `">
-        <img src="` + this.image + `" alt=` + this.imageAlt + `>
+function CardToHTML(card) {
+    return `<a class="card" href="` + card.link + `">
+        <img src="` + card.image + `" alt=` + card.imageAlt + `>
         <div class="container">
             <h2>
-            ` + this.title + `
+            ` + card.title + `
             </h2>
             <p>
-            ` + this.text + `
+            ` + card.text + `
             </p>
         </div>
         </a>`
-    }
 }
 
-let cards = [
-    new Card
-        ("blog8.html",
-            "../images/person-using-laptop-computer.jpg",
-            "Placeholder",
-            "Interacting with Interactivity",
-            "Interactivity as defined by the Oxford dictionary is...",
-            "‎22 ‎April ‎2020",
-            "24 ‎April ‎2020"),
-    new Card
-        ("blog7.html",
-            "../images/Microphone.jpg",
-            "Placeholder",
-            "Teaching and learning online.",
-            "In light of the current pandemic, any teaching...",
-            "‎22 ‎April ‎2020",
-            "22 ‎April ‎2020"),
-    new Card
-        ("blog6.html",
-            "../images/PlaceHolder.png",
-            "Placeholder",
-            "Giovanni's Company during the Outbreak",
-            "Lorem ipsum blah blah fish paste...",
-            "‎22 ‎April ‎2020",
-            "24 ‎April ‎2020"),
-    new Card
-        ("blog5.html",
-            "../images/Ravoire_radio_tower.JPG",
-            "Raviore Radio Tower",
-            "Communication Ideas - Speculation",
-            "As a result of the current pandemic...",
-            "‎22 ‎April ‎2020",
-            "24 ‎April ‎2020"),
-    new Card
-        ("blog4.html",
-            "../images/Henry-Cat2.jpg",
-            "Henry the Cat",
-            "Meta Meta-data blog post",
-            "The Latin origin word, meta, is used to describe...",
-            "‎22 ‎April ‎2020",
-            "24 ‎April ‎2020"),
-    new Card
-        ("blog3.html",
-            "../images/PlaceHolder.png",
-            "Placeholder",
-            "Semantics of Semantic Markup",
-            "Semantics is relating to meaning in language or logic...",
-            "‎22 ‎April ‎2020",
-            "24 ‎April ‎2020"),
-    new Card
-        ("blog2.html",
-            "../images/Arpanet_logical_map.png",
-            "Logical Map of Arpanet circa 1977",
-            "The Internet's First Hello World",
-            "Just over 50 years ago, on October 29th, 1969...",
-            "‎22 ‎April ‎2020",
-            "24 ‎April ‎2020"),
-    new Card
-        ("blog1.html",
-            "../images/Vannevar_Bush_portrait.jpg",
-            "Portrait of Vannevar Bush",
-            "As we may retroactively think",
-            "“As we may think”, was an essay written in...",
-            "‎22 ‎April ‎2020",
-            "24 ‎April ‎2020")
-]
+let cards = [];
 
 
 let maxCardsOnScreen = 6;
 let pos = 0;
 
+function getCards(active, isBlog = false) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            cards = JSON.parse(this.responseText);
+            refreshBlogContents(active, isBlog);
+        }
+    };
+    xmlhttp.open("GET", "/WSOA3028A_1830290/blogs/contents.json", true);
+    xmlhttp.send();
+}
+
 function generateCards() {
+
     output = "";
     for (let i = pos; i < clamp(pos + maxCardsOnScreen, 0, cards.length); i++) {
-        output += cards[i].toHTML();
+        output += CardToHTML(cards[i]);
     }
     document.getElementsByClassName("BlogIndexNumber")[0].innerHTML = "Blog page " + (pos / 6 + 1) + " of " + Math.ceil(cards.length / 6);
     document.getElementsByClassName("gridContainer")[0].innerHTML = output;

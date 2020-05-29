@@ -1,0 +1,74 @@
+[
+    {
+        "link": "blog8.html",
+        "image": "../images/person-using-laptop-computer.jpg",
+        "imageAlt": "Placeholder",
+        "title": "Interacting with Interactivity",
+        "text": "Interactivity as defined by the Oxford dictionary is...",
+        "creation": "‎22 ‎April ‎2020",
+        "lastModified": "24 ‎April ‎2020"
+    },
+    {
+        "link": "blog7.html",
+        "image": "../images/Microphone.jpg",
+        "imageAlt": "Placeholder",
+        "title": "Teaching and learning online.",
+        "text": "In light of the current pandemic, any teaching...",
+        "creation": "‎22 ‎April ‎2020",
+        "lastModified": "22 ‎April ‎2020"
+    },
+    {
+        "link": "blog6.html",
+        "image": "../images/PlaceHolder.png",
+        "imageAlt": "Placeholder",
+        "title": "Giovanni's Company during the Outbreak",
+        "text": "Lorem ipsum blah blah fish paste...",
+        "creation": "‎22 ‎April ‎2020",
+        "lastModified": "24 ‎April ‎2020"
+    },
+    {
+        "link": "blog5.html",
+        "image": "../images/Ravoire_radio_tower.JPG",
+        "imageAlt": "Raviore Radio Tower",
+        "title": "Communication Ideas - Speculation",
+        "text": "As a result of the current pandemic...",
+        "creation": "‎22 ‎April ‎2020",
+        "lastModified": "24 ‎April ‎2020"
+    },
+    {
+        "link": "blog4.html",
+        "image": "../images/Henry-Cat2.jpg",
+        "imageAlt": "Henry the Cat",
+        "title": "Meta Meta-data blog post",
+        "text": "The Latin origin word, meta, is used to describe...",
+        "creation": "‎22 ‎April ‎2020",
+        "lastModified": "24 ‎April ‎2020"
+    },
+    {
+        "link": "blog3.html",
+        "image": "../images/PlaceHolder.png",
+        "imageAlt": "Placeholder",
+        "title": "Semantics of Semantic Markup",
+        "text": "Semantics is relating to meaning in language or logic...",
+        "creation": "‎22 ‎April ‎2020",
+        "lastModified": "24 ‎April ‎2020"
+    },
+    {
+        "link": "blog2.html",
+        "image": "../images/Arpanet_logical_map.png",
+        "imageAlt": "Logical Map of Arpanet circa 1977",
+        "title": "The Internet's First Hello World",
+        "text": "Just over 50 years ago, on October 29th, 1969...",
+        "creation": "‎22 ‎April ‎2020",
+        "lastModified": "24 ‎April ‎2020"
+    },
+    {
+        "link": "blog1.html",
+        "image": "../images/Vannevar_Bush_portrait.jpg",
+        "imageAlt": "Portrait of Vannevar Bush",
+        "title": "As we may retroactively think",
+        "text": "“As we may think”, was an essay written in...",
+        "creation": "‎22 ‎April ‎2020",
+        "lastModified": "24 ‎April ‎2020"
+    }
+]
