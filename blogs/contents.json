@@ -1,12 +1,21 @@
 [
     {
+        "link": "blog9.html",
+        "image": "../images/X-47B_operating_in_the_Atlantic_Test_Range_(modified).jpg",
+        "imageAlt": "X-47B in the Atlantic Test Range",
+        "title": "Pandora's Box",
+        "text": "Machine learning in recent years...",
+        "creation": "‎29 May ‎2020",
+        "lastModified": "2 June ‎2020"
+    },
+    {
         "link": "blog8.html",
         "image": "../images/person-using-laptop-computer.jpg",
         "imageAlt": "Placeholder",
         "title": "Interacting with Interactivity",
         "text": "Interactivity as defined by the Oxford dictionary is...",
         "creation": "‎22 ‎April ‎2020",
-        "lastModified": "24 ‎April ‎2020"
+        "lastModified": "23 ‎April ‎2020"
     },
     {
         "link": "blog7.html",
@@ -24,7 +33,7 @@
         "title": "Giovanni's Company during the Outbreak",
         "text": "Lorem ipsum blah blah fish paste...",
         "creation": "‎22 ‎April ‎2020",
-        "lastModified": "24 ‎April ‎2020"
+        "lastModified": "23 ‎April ‎2020"
     },
     {
         "link": "blog5.html",
@@ -33,7 +42,7 @@
         "title": "Communication Ideas - Speculation",
         "text": "As a result of the current pandemic...",
         "creation": "‎22 ‎April ‎2020",
-        "lastModified": "24 ‎April ‎2020"
+        "lastModified": "23 ‎April ‎2020"
     },
     {
         "link": "blog4.html",
@@ -42,7 +51,7 @@
         "title": "Meta Meta-data blog post",
         "text": "The Latin origin word, meta, is used to describe...",
         "creation": "‎22 ‎April ‎2020",
-        "lastModified": "24 ‎April ‎2020"
+        "lastModified": "23 ‎April ‎2020"
     },
     {
         "link": "blog3.html",
@@ -69,6 +78,6 @@
         "title": "As we may retroactively think",
         "text": "“As we may think”, was an essay written in...",
         "creation": "‎22 ‎April ‎2020",
-        "lastModified": "24 ‎April ‎2020"
+        "lastModified": "23 ‎April ‎2020"
     }
 ]

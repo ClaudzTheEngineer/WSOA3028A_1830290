@@ -48,10 +48,11 @@ function insertBlogNav() {
     output += "<p>Blog " + blogNum + " of " + cards.length + "</p>"
     document.getElementsByClassName("blogNav")[0].innerHTML += output;
 
-
+    blogIndex = cards.length - blogNum;
     output = "";
-    output += "| Published: " + cards[blogNum - 1].creation + " | Edited: " + cards[blogNum - 1].lastModified;
+    output += "| Published: " + cards[blogIndex].creation + " | Edited: " + cards[blogIndex].lastModified;
     document.getElementById("info").innerHTML += output;
+
 }
 
 function insertBlogDateTime() {
