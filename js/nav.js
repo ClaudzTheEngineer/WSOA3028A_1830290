@@ -19,8 +19,7 @@ function generateNav(active) {
         output += "\">" + linkName[i] + "</a></li>\n";
     }
     output += "</ul>";
-
-    document.getElementsByTagName("nav")[0].innerHTML += output;
+    document.getElementById("navbar").innerHTML += output;
 }
 
 function insertFooter() {
