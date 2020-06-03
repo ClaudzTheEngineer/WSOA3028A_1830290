@@ -86,7 +86,6 @@ function insertElements(active, isBlog = false) {
             generateNav(active);
             refreshBlogContents(active, isBlog);
             insertFooter();
-
         }
     };
     xmlhttp.open("GET", "/WSOA3028A_1830290/blogs/contents.json", true);
