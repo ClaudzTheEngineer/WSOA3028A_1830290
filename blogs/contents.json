@@ -1,7 +1,7 @@
 [
     {
         "link": "blog12.html",
-        "image": "../images/Placeholder.png",
+        "image": "../images/PlaceHolder.png",
         "imageAlt": "Placeholder",
         "title": "Something",
         "text": "something",
@@ -10,7 +10,7 @@
     },
     {
         "link": "blog11.html",
-        "image": "../images/Placeholder.png",
+        "image": "../images/PlaceHolder.png",
         "imageAlt": "Placeholder",
         "title": "Internet Geographies",
         "text": "lorem ipsum...",
@@ -19,7 +19,7 @@
     },
     {
         "link": "blog10.html",
-        "image": "../images/Placeholder.png",
+        "image": "../images/PlaceHolder.png",
         "imageAlt": "Placeholder",
         "title": "Suzzi LTD - Update",
         "text": "Lorem ipsum...",
