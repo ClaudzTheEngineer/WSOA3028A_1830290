@@ -4,22 +4,40 @@ function insertHeader() {
 }
 
 function generateNav(active) {
-
-    let output = "<ul>\n";
     let links = ["", "about/", "blogs/", "contact/", "services/", "construction/"];
     let linkName = ["Home", "About", "Blogs", "Contact Me", "Services", "Construction Zone"];
-
+    let nav = document.createElement("ul");
     for (let i = 0; i < links.length; i++) {
         let currentLink = "/WSOA3028A_1830290/" + links[i] + "index.html";
+        item = document.createElement("li");
+        link = document.createElement("a");
+        link.href = currentLink;
+        link.innerText = linkName[i];
+        if (active == i) link.setAttribute('class', 'active');
 
-        output += "<li";
-        output += (i == active) ? " class=\"active\"" : "";
-        output += "><a href=\"";
-        output += currentLink;
-        output += "\">" + linkName[i] + "</a></li>\n";
+        item.appendChild(link);
+        if (i == 2) {
+            dropdownContainer = document.createElement("div");
+            dropdownContainer.setAttribute('class', 'dropdown-content');
+            for (let index = 0; index < clamp(cards.length, 0, 6); index++) {
+                bloglink = document.createElement("a");
+                bloglink.innerText = cards[index].title;
+                bloglink.href = "/WSOA3028A_1830290/blogs/" + cards[index].link;
+                dropdownContainer.appendChild(bloglink);
+            }
+            bloglistlink = document.createElement("a");
+            bloglistlink.href = "/WSOA3028A_1830290/blogs/index.html";
+            bloglistlink.innerHTML = "&#11206";
+            bloglistlink.style = "text-align: center";
+            dropdownContainer.appendChild(bloglistlink);
+            item.className += " dropdown";
+            item.appendChild(dropdownContainer);
+
+        }
+
+        nav.appendChild(item);
     }
-    output += "</ul>";
-    document.getElementById("navbar").innerHTML += output;
+    document.getElementById("navbar").appendChild(nav);
 }
 
 function insertFooter() {
@@ -59,10 +77,22 @@ function insertBlogDateTime() {
 }
 
 function insertElements(active, isBlog = false) {
-    insertHeader();
-    generateNav(active);
-    insertFooter();
-    if (active == 2) getCards(active, isBlog);
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            cards = JSON.parse(this.responseText);
+
+            insertHeader();
+            generateNav(active);
+            refreshBlogContents(active, isBlog);
+            insertFooter();
+
+        }
+    };
+    xmlhttp.open("GET", "/WSOA3028A_1830290/blogs/contents.json", true);
+    xmlhttp.send();
+
+    //if (active == 2) getCards(active, isBlog);
 }
 
 function refreshBlogContents(active, isBlog = false) {
@@ -92,18 +122,6 @@ let cards = [];
 
 let maxCardsOnScreen = 6;
 let pos = 0;
-
-function getCards(active, isBlog = false) {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            cards = JSON.parse(this.responseText);
-            refreshBlogContents(active, isBlog);
-        }
-    };
-    xmlhttp.open("GET", "/WSOA3028A_1830290/blogs/contents.json", true);
-    xmlhttp.send();
-}
 
 function generateCards() {
 

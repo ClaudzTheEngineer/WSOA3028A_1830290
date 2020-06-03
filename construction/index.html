@@ -79,7 +79,8 @@
 
         <p>
             The mobile oriented menu was removed due to the bodged implementation and new focus on creating a more
-            desktop focused webpage. A mobile version may come later
+            desktop focused webpage. A mobile version may come later, this is discussed below.
+            https://webaim.org/resources/contrastchecker/ is used in the checking of contrast for web accessibility.
         </p>
         <h3>Updated WireFrames</h3>
 
@@ -109,14 +110,19 @@
             information needed for each card (the title, subtext, image link, blog link etc), I can then easily
             manipulate the generated cards in javascript and provide more flexibility. Using this i created a basic page
             system for the blog index.
+            <br><br>
+            To improve this system I implemented a system that reads the blog information from a .json file. This
+            decouples the information about the page from the javascript.
         </p>
         <h3>
             Responsive design
         </h3>
         <p>
             Due to me developing on desktop, I had neglected the experience for mobile and tablet users, as such I
-            redesigned the interface such that the page now automatically rescales accordingly.
+            redesigned the interface such that the page now automatically rescales accordingly. The blog index now
+            scales accordingly to the relative width of the device it is being viewed on.
         </p>
+        <img src=../images/IMG_20200603_0001.jpg alt="Logo">
     </main>
 
     <footer></footer>

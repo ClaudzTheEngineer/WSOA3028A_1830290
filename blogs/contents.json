@@ -1,5 +1,32 @@
 [
     {
+        "link": "blog12.html",
+        "image": "../images/Placeholder.png",
+        "imageAlt": "Placeholder",
+        "title": "Something",
+        "text": "something",
+        "creation": "‎3 June May ‎2020",
+        "lastModified": "2 June ‎2020"
+    },
+    {
+        "link": "blog11.html",
+        "image": "../images/Placeholder.png",
+        "imageAlt": "Placeholder",
+        "title": "Internet Geographies",
+        "text": "lorem ipsum...",
+        "creation": "‎3 June ‎2020",
+        "lastModified": "2 June ‎2020"
+    },
+    {
+        "link": "blog10.html",
+        "image": "../images/Placeholder.png",
+        "imageAlt": "Placeholder",
+        "title": "Suzzi LTD - Update",
+        "text": "Lorem ipsum...",
+        "creation": "‎3 June ‎2020",
+        "lastModified": "2 June ‎2020"
+    },
+    {
         "link": "blog9.html",
         "image": "../images/X-47B_operating_in_the_Atlantic_Test_Range_(modified).jpg",
         "imageAlt": "X-47B in the Atlantic Test Range",
@@ -28,12 +55,12 @@
     },
     {
         "link": "blog6.html",
-        "image": "../images/PlaceHolder.png",
-        "imageAlt": "Placeholder",
+        "image": "../images/Open.png",
+        "imageAlt": "Open Sign",
         "title": "Giovanni's Company during the Outbreak",
         "text": "Lorem ipsum blah blah fish paste...",
         "creation": "‎22 ‎April ‎2020",
-        "lastModified": "23 ‎April ‎2020"
+        "lastModified": "3 ‎June ‎2020"
     },
     {
         "link": "blog5.html",
