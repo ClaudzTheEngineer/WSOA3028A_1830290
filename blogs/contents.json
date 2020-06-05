@@ -1,30 +1,30 @@
 [
     {
         "link": "blog12.html",
-        "image": "../images/PlaceHolder.png",
-        "imageAlt": "Placeholder",
-        "title": "Something",
-        "text": "something",
+        "image": "../images/Artificial_Intelligence.png",
+        "imageAlt": "Wirefram Robot holding the letters AI",
+        "title": "The Black, the White and the Grey",
+        "text": "Artificial Intelligence in this context, is a system...",
         "creation": "‎3 June May ‎2020",
-        "lastModified": "2 June ‎2020"
+        "lastModified": "4 June ‎2020"
     },
     {
         "link": "blog11.html",
-        "image": "../images/PlaceHolder.png",
-        "imageAlt": "Placeholder",
+        "image": "../images/TI86_Calculator_DivByZero.jpg",
+        "imageAlt": "TI86 showing a divid by zero error message",
         "title": "Divide by Zero",
-        "text": "lorem ipsum...",
+        "text": "The internet is meant to be the great equaliser...",
         "creation": "‎3 June ‎2020",
-        "lastModified": "2 June ‎2020"
+        "lastModified": "4 June ‎2020"
     },
     {
         "link": "blog10.html",
-        "image": "../images/PlaceHolder.png",
+        "image": "../images/update.jpg",
         "imageAlt": "Placeholder",
         "title": "Suzzi LTD - Update",
-        "text": "Lorem ipsum...",
+        "text": "In these uncertain times, I wanna break...",
         "creation": "‎3 June ‎2020",
-        "lastModified": "2 June ‎2020"
+        "lastModified": "3 June ‎2020"
     },
     {
         "link": "blog9.html",
@@ -33,7 +33,7 @@
         "title": "Pandora's Box",
         "text": "Machine learning in recent years...",
         "creation": "‎29 May ‎2020",
-        "lastModified": "2 June ‎2020"
+        "lastModified": "3 June ‎2020"
     },
     {
         "link": "blog8.html",
@@ -82,8 +82,8 @@
     },
     {
         "link": "blog3.html",
-        "image": "../images/PlaceHolder.png",
-        "imageAlt": "Placeholder",
+        "image": "../images/SemanticMarkup.png",
+        "imageAlt": "Example of Semantic Markup in HTML",
         "title": "Semantics of Semantic Markup",
         "text": "Semantics is relating to meaning in language or logic...",
         "creation": "‎22 ‎April ‎2020",
