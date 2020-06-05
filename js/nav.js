@@ -5,7 +5,7 @@ function insertHeader() {
 
 function generateNav(active) {
     let links = ["", "about/", "blogs/", "contact/", "services/", "construction/"];
-    let linkName = ["Home", "About", "Blogs", "Contact Me", "Services", "Construction Zone"];
+    let linkName = ["Home", "About", "Blogs", "Contact Us", "Services", "Construction Zone"];
     let nav = document.createElement("ul");
     for (let i = 0; i < links.length; i++) {
         let currentLink = "/WSOA3028A_1830290/" + links[i] + "index.html";
@@ -86,6 +86,7 @@ function insertElements(active, isBlog = false) {
             generateNav(active);
             refreshBlogContents(active, isBlog);
             insertFooter();
+            if (active == 0) generateLatestBlog();
         }
     };
     xmlhttp.open("GET", "/WSOA3028A_1830290/blogs/contents.json", true);
@@ -114,6 +115,19 @@ function CardToHTML(card) {
             </p>
         </div>
         </a>`
+}
+
+function generateLatestBlog() {
+    element = document.getElementById("lastestBlog");
+    para = document.createElement("p");
+    para.innerText = "Latest Blog Post: ";
+
+
+    link = document.createElement("a");
+    link.href = "/WSOA3028A_1830290/blogs/" + cards[0].link;
+    link.innerText = cards[0].title;
+    para.appendChild(link);
+    element.appendChild(para);
 }
 
 let cards = [];
