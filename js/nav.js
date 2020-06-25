@@ -7,11 +7,20 @@ function generateNav(active) {
     let links = ["", "about/", "blogs/", "contact/", "services/", "construction/"];
     let linkName = ["Home", "About", "Blogs", "Contact Us", "Services", "Construction Zone"];
     let nav = document.createElement("ul");
+    nav.id = "collapsible";
 
+    let logo = document.createElement('img');
+    logo.setAttribute('class', 'logo');
+    logo.src = "/WSOA3028A_1830290/images/Trimmed-Logo.png";
+    logo.alt = "logo";
+    document.getElementById("navbar").appendChild(logo);
 
-    let logo = document.createElement('li');
-    logo.innerHTML = '<img src="/WSOA3028A_1830290/images/Logo128.png" alt="Logo" style="width:100px;height:100px;"></img>';
-    nav.appendChild(logo);
+    let nav_collapse_link = document.createElement('a');
+    nav_collapse_link.setAttribute('class', 'nav-collapser');
+    nav_collapse_link.setAttribute('onclick', "toggleNav()");
+    nav_collapse_link.href = "javascript: void(0) "
+    nav_collapse_link.innerHTML = '&#9776;';
+    document.getElementById("navbar").appendChild(nav_collapse_link);
 
 
     for (let i = 0; i < links.length; i++) {
@@ -32,9 +41,13 @@ function generateNav(active) {
                 bloglink.href = "/WSOA3028A_1830290/blogs/" + cards[index].link;
                 dropdownContainer.appendChild(bloglink);
             }
-            bloglistlink = document.createElement("a");
+            let divider = document.createElement('hr');
+            divider.setAttribute('class', 'solid');
+            dropdownContainer.appendChild(divider);
+
+            let bloglistlink = document.createElement("a");
             bloglistlink.href = "/WSOA3028A_1830290/blogs/index.html";
-            bloglistlink.innerHTML = "&#11206";
+            bloglistlink.innerText = "See more";
             bloglistlink.style = "text-align: center";
             dropdownContainer.appendChild(bloglistlink);
             item.className += " dropdown";
@@ -43,7 +56,12 @@ function generateNav(active) {
         }
 
         nav.appendChild(item);
+
+
+
     }
+
+
     document.getElementById("navbar").appendChild(nav);
 }
 
@@ -89,7 +107,7 @@ function insertElements(active, isBlog = false) {
         if (this.readyState == 4 && this.status == 200) {
             cards = JSON.parse(this.responseText);
 
-            insertHeader();
+            //insertHeader();
             generateNav(active);
             refreshBlogContents(active, isBlog);
             insertFooter();
@@ -169,4 +187,13 @@ function previousPage() {
     pos -= 6;
     generateCards();
 
+}
+
+
+let expandedNav = false;
+function toggleNav() {
+    let navlist = document.getElementById("collapsible");
+
+    navlist.style = expandedNav ? "height:0px" : "height:auto";
+    expandedNav ^= true;
 }
