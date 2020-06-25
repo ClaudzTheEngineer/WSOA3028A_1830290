@@ -33,7 +33,6 @@
       top: 0.5em;
       
       z-index: 999;
-      
   }
 
 
@@ -44,12 +43,27 @@
     overflow: hidden;
     background-color: var(--main-textbg-color);
     box-shadow: 10px 10px 5px var(--main-bg2-color);
+    height:0px;
+    transition: 0.3s;
   }
 
   .navbar li {
     float:left;
+    width:100%;
     
   }
+
+  @media only screen and (min-width: 768px) {
+    .navbar li {
+      width:auto;
+      display: block;
+    }
+    
+    .navbar ul {
+      height:auto;
+    }
+  }
+
   
   .navbar li a{
       display: block;

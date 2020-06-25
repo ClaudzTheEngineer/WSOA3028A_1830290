@@ -7,6 +7,13 @@ function generateNav(active) {
     let links = ["", "about/", "blogs/", "contact/", "services/", "construction/"];
     let linkName = ["Home", "About", "Blogs", "Contact Us", "Services", "Construction Zone"];
     let nav = document.createElement("ul");
+
+
+    let logo = document.createElement('li');
+    logo.innerHTML = '<img src="/WSOA3028A_1830290/images/Logo128.png" alt="Logo" style="width:100px;height:100px;"></img>';
+    nav.appendChild(logo);
+
+
     for (let i = 0; i < links.length; i++) {
         let currentLink = "/WSOA3028A_1830290/" + links[i] + "index.html";
         item = document.createElement("li");

@@ -1,11 +1,38 @@
 [
     {
-        "link": "blog12.html",
+        "link": "blog15.html",
         "image": "../images/Artificial_Intelligence.png",
         "imageAlt": "Wirefram Robot holding the letters AI",
+        "title": "Something deep and meaningful",
+        "text": "Artificial Intelligence in this context, is a system...",
+        "creation": "‎25 June ‎2020",
+        "lastModified": "25 June ‎2020"
+    },
+    {
+        "link": "blog14.html",
+        "image": "../images/Artificial_Intelligence.png",
+        "imageAlt": "Wirefram Robot holding the letters AI",
+        "title": "Google Maps, the API of my eye",
+        "text": "Artificial Intelligence in this context, is a system...",
+        "creation": "‎25 June ‎2020",
+        "lastModified": "25 June ‎2020"
+    },
+    {
+        "link": "blog13.html",
+        "image": "../images/Artificial_Intelligence.png",
+        "imageAlt": "Wirefram Robot holding the letters AI",
+        "title": "Suzzi Update 2",
+        "text": "Lorem Ipsum...",
+        "creation": "‎25 June ‎2020",
+        "lastModified": "25 June ‎2020"
+    },
+    {
+        "link": "blog12.html",
+        "image": "../images/Artificial_Intelligence.png",
+        "imageAlt": "Wireframe Robot holding the letters AI",
         "title": "The Black, the White and the Grey",
         "text": "Artificial Intelligence in this context, is a system...",
-        "creation": "‎3 June May ‎2020",
+        "creation": "‎3 June ‎2020",
         "lastModified": "4 June ‎2020"
     },
     {
