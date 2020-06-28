@@ -194,6 +194,6 @@ let expandedNav = false;
 function toggleNav() {
     let navlist = document.getElementById("collapsible");
 
-    navlist.style = expandedNav ? "height:0px" : "height:auto";
+    navlist.style = (expandedNav && screen.width < 768) ? "" : "height:auto";
     expandedNav ^= true;
 }
