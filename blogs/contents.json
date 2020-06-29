@@ -10,19 +10,19 @@
     },
     {
         "link": "blog14.html",
-        "image": "../images/Artificial_Intelligence.png",
-        "imageAlt": "Wirefram Robot holding the letters AI",
-        "title": "Google Maps, the API of my eye",
-        "text": "Artificial Intelligence in this context, is a system...",
+        "image": "../images/Map.png",
+        "imageAlt": "Snapshot of the map from the about page illustrating Monfalcone and Trieste",
+        "title": "Google Maps, the API(le) of my eye",
+        "text": "For my website I wanted to integrate...",
         "creation": "‎25 June ‎2020",
         "lastModified": "25 June ‎2020"
     },
     {
         "link": "blog13.html",
-        "image": "../images/Artificial_Intelligence.png",
-        "imageAlt": "Wirefram Robot holding the letters AI",
-        "title": "Suzzi Update 2",
-        "text": "Lorem Ipsum...",
+        "image": "../images/back-to-work.png",
+        "imageAlt": "Sign showing 'Back to Work'",
+        "title": "Suzzi Update 2: Electric Boogaloo",
+        "text": " With the country’s move to lockdown level 2...",
         "creation": "‎25 June ‎2020",
         "lastModified": "25 June ‎2020"
     },

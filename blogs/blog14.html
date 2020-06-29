@@ -5,11 +5,11 @@
     <link href="../css/stylesheet.css" rel="stylesheet">
     <script src="../js/nav.js"></script>
     <meta charset="UTF-8">
-    <meta name="desciption" content="Template">
+    <meta name="desciption" content="Blog about Google Maps">
     <meta name="author" content="Claudio Surmon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        Template
+        Google Maps, the API(le) of my Eye
     </title>
 </head>
 
@@ -20,20 +20,42 @@
     <nav class="navbar" id="navbar"></nav>
     <article>
         <h1>
-            Template
+            Google Maps, the API(le) of my Eye
         </h1>
         <p id="info">
-            by Claudio Surmon
+            by Giovanni Suzzi
         </p>
         <figure>
-            <img src="../images/PlaceHolder.png" alt="PlaceHolder">
+            <img src="../images/Map.png" alt="Map of Monfalcone and Trieste">
             <figcaption>
-                Vannevar Bush at a desk
+                Snapshot of the "My Map" from the 'About' page
                 </br>
-                From "OEM Defence" during World War 2, United States Treasury, public domain.
+                From Google Maps 2020
             </figcaption>
         </figure>
         <p>
+            For my website I wanted to integrate an interactable map showing my travels around the world with regards to
+            my childhood, early life, military adventures as well as my later life. So I thought the best way to achieve
+            this would be through the usage of the Google Maps API.
+            <br><br>
+            The original plan was to use the KML/KMZ file format to store all the points I wanted to portray on the map,
+            and then utilising the google maps API I would generate the map at runtime using javascript. However, this
+            was unfeasible to do as a service I had initially interpreted as free had various conditions. The usage of
+            Google’s “My Maps” service is free, and so is embedding. The usage of their API however is not, and the
+            price varies on the amount of people passing through your site and the inclusion of a credit card being tied
+            to your account. This I did not feel comfortable doing, and as such decided to go with the less impressive
+            route of embedding the map in my ‘About’ page.
+            <br><br>
+            Now the choice to go with a Maps API at all instead of just using images and a list. That is mainly driven
+            by interactivity. Because I can scribble all over a static image, but its not interactable, a user cannot
+            zoom in and pan about and see whats nearby that’s relevant to them. The points of interest are also not a
+            constant distance apart, where some are roughly 2km apart, and others 12000km apart, meaning zooming and
+            panning is a necessity.
+            <br><br>
+            In my family it is a rare occurance for all 3 of us to be in a photo together (as someone has to hold the
+            camera). However, on my one visit back to Italy to visit my parents, we saw one of the Google Maps street
+            view cars driving past. So somewhere on Google maps we will be immortalised as one of the few photos of my
+            whole family. It was a silly moment but it was special for me and my family.
 
         </p>
     </article>
